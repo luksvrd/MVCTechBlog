@@ -9,11 +9,11 @@ router.post("/", async (req, res) => {
     });
 
     req.session.save(() => {
-      req.session.user_id = newUser.id;
+      req.session.userId = newUser.id;
       req.session.username = newUser.username;
       req.session.loggedIn = true;
 
-      res.status(200).json(newUser);
+      res.json(newUser);
     });
   } catch (err) {
     // a 500 error is a server error
@@ -36,7 +36,7 @@ router.post("/login", async (req, res) => {
       return;
     }
 
-    const validPassword = await user.checkPassword(req.body.password);
+    const validPassword = user.checkPassword(req.body.password);
 
     if (!validPassword) {
       res.status(400).json({
@@ -47,7 +47,7 @@ router.post("/login", async (req, res) => {
     }
 
     req.session.save(() => {
-      req.session.user_id = user.id;
+      req.session.userId = user.id;
       req.session.username = user.username;
       req.session.loggedIn = true;
 
