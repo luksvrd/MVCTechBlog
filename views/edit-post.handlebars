@@ -13,13 +13,15 @@
       class="form-input"
     />
 
+    <label class="form-label" for="post-body">Content</label>
+    <textarea name="post-body" class="form-input">{{post.body}}</textarea>
+
     <button type="submit" class="btn">Update</button>
 
-    <button type="button" class="btn" id="delete-post-btn">
+    <button type="button" class="btn" id="delete-btn">
       Delete
     </button>
-
   </form>
 </div>
 
-<script src="/js/edit.js"></script>
+<script src="../public/js/edit.js"></script>

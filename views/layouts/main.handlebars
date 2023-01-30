@@ -1,32 +1,50 @@
 <html lang="en">
 
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tech Blog</title>
     <link
-      href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700&display=swap"
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@1.x/dist/tailwind.min.css"
+      rel="stylesheet"
     />
-    <link rel="stylesheet" href="/css/style.css" />
+    <link href="/dist/output.css" rel="stylesheet" />
   </head>
 
-  <body class="flex-column min-100-vh">
-    <nav class="navbar">
-      <ul>
-        <li class="li-inline nav-item"><a href="/">Home</a></li>
-        <li class="li-inline nav-item"><a href="/dashboard">Dashboard</a></li>
-        <li class="li-inline nav-item"><a href="/login">Login</a></li>
+  <body class="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
+    <nav
+      class="bg-white px-2 sm:px-4 py-2.5 dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600"
+    >
+    <div class="container flex flex-wrap items-center justify-between mx-auto">
+      <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">TechBlog</span>
+  </a>
+      <ul
+        class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+      >
+        <li><a
+            href="/"
+            class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white"
+          >Home</a></li>
+        <li class="li-inline nav-item"><a
+            href="/dashboard"
+            class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white"
+          >Dashboard</a></li>
+        <li class="li-inline nav-item"><a
+            href="/login"
+            class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white"
+          >Login</a></li>
         <li class="li-inline nav-item"><a
             href="#"
             id="logout-link"
+            class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white"
           >Logout</a></li>
       </ul>
     </nav>
     <header class="hero">
-      <h1 class="app-title"><a href="/">Tech blog</a></h1>
+      <h1 class="app-title text-4xl font-extrabold dark:text-white"><a href="/">Tech blog</a></h1>
     </header>
 
-    <main class="col-auto">
+    <main class="mb-3 font-light text-gray-500 dark:text-gray-400">
       {{{body}}}
     </main>
 
@@ -36,4 +54,4 @@
   </body>
 
 </html>
-<script src="/js/logout.js"></script>
+<script src="../../public/js/logout.js"></script>

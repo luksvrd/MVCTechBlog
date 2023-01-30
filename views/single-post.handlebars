@@ -8,6 +8,7 @@
     </div>
     <div class="card-body">
       {{post.body}}
+      </div>
   </article>
 
   {{#if post.Comments}}
@@ -32,14 +33,14 @@
       <h3>Leave a Comment</h3>
     </div>
 
-    <div class="card-body">
-      <div class="form-group">
+      <div class="card-body">
+        <input type="hidden" name="post-id" value="{{post.id}}" />
         <label for="comment-body">Comment</label>
         <textarea name="comment-body" class="form-input" placeholder="Comment"></textarea>
+        <button type="submit" class="btn">Submit</button>
       </div>
-    </div>
-
-    <div class="card-footer">
-      <button type="submit" class="btn">Submit</button>
-    </div>
+    </form>
+  </div>
 </div>
+
+<script src="../public/js/comment.js"></script>
