@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Node JS",
+    "body": "This challenge requires NodeJS",
+    "userId": 1
+  },
+  {
+    "title": "Express Session",
+    "body": "This challenge uses the express session npm package",
+    "userId": 2
+  },
+  {
+    "title": "bCrypt",
+    "body": "This challenge uses the npm package bCrypt to hash passwords",
+    "userId": 3
+  },
+  {
+    "title": "Handlebars",
+    "body": "This challenge renders pages from the back-end, using Handlebars",
+    "userId": 4
+  },
+  {
+    "title": "Helpers",
+    "body": "This uses a helper to format the output of dates from SQL",
+    "userId": 3
+  }
+]
