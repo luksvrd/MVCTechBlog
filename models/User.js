@@ -24,6 +24,7 @@ User.init(
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
+        // len is a validation that checks that the password is at least four characters long
         len: [4],
       },
     },
@@ -46,7 +47,7 @@ User.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: "user",
+    modelName: "User",
   }
 );
 
