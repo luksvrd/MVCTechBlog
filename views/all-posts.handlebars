@@ -1,20 +1,25 @@
-<div class="posts">
+<ol class="posts relative border-l border-gray-200 dark:border-gray-700">
   {{#each posts}}
-    <article class="card">
-      <div class="card-header flex-row justify-space-between">
-        <h2>
-          <a href="/post/{{id}}">{{title}}</a>
-        </h2>
-        <div>
-          Posted by
-          {{User.username}}
-          on
-          {{format_date createdAt}}
+    <li class="card mb-10 ml-6">
+      <div
+        class="p-4 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-700 dark:border-gray-600"
+      >
+        <div class="items-center justify-between mb-3 sm:flex">
+          <div
+            class="card -header text-sm font-normal text-gray-500 lex dark:text-gray-300"
+          >Posted by
+            {{User.username}}
+            on
+            {{format_date createdAt}}
+            <a
+              href="/post/{{id}}"
+              class="font-semibold text-gray-900 dark:text-white hover:underline"
+            >{{title}}</a></div>
         </div>
+        <div
+          class="card-body p-3 text-xs italic font-normal text-gray-500 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-600 dark:border-gray-500 dark:text-gray-300"
+        >{{body}}</div>
       </div>
-      <div class="card-body">
-        {{body}}
-      </div>
-    </article>
+    </li>
   {{/each}}
-</div>
+</ol>
