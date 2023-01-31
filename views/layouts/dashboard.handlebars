@@ -9,30 +9,34 @@
   <link href="/dist/output.css" type="text/css" />
 </head>
 
-<body
-  class="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700"
+<nav
+  class="navbar bg-white px-2 sm:px-4 py-2.5 dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600"
 >
-  <nav
-    class="navbar bg-white px-2 sm:px-4 py-2.5 dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600"
+  <ul class="flex-row">
+    <li class="li-inline nav-item"><a href="/">Home</a></li>
+    <li class="li-inline nav-item"><a href="/dashboard">Dashboard</a></li>
+    <li class="li-inline nav-item"><a href="#" id="logout-link">Logout</a>
+    </li>
+  </ul>
+</nav>
+
+<div class="flex justify-center items-center w-screen h-screen">
+  <div
+    class="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700"
   >
-    <ul class="flex-row">
-      <li class="li-inline nav-item"><a href="/">Home</a></li>
-      <li class="li-inline nav-item"><a href="/dashboard">Dashboard</a></li>
-      <li class="li-inline nav-item"><a href="#" id="logout-link">Logout</a>
-      </li>
-    </ul>
-  </nav>
-  <header class="hero">
-    <h1 class="app-title"><a href="/dashboard">Your Dashboard</a></h1>
-  </header>
+    <body
+      class="p-5 mt-10 mb-4 border border-gray-100 rounded-lg bg-gray-50 dark:bg-gray-800 dark:border-gray-700"
+    >
+      <main class="mb-3 font-light gap-y-5 text-gray-500 dark:text-gray-400">
+        {{{body}}}
+      </main>
 
-  <main class="col-auto">
-    {{{body}}}
-  </main>
+      <footer class="footer flex-row justify-center">
+        <a href="/dashboard/new">New Post</a>
+      </footer>
 
-  <footer class="footer flex-row justify-center">
-    <a href="/dashboard/new">New Post</a>
-  </footer>
-</body>
+    </body>
+  </div>
+</div>
 
 <script src="/js/logout.js"></script>
