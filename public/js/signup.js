@@ -11,13 +11,12 @@ const signupFormHandler = async function (event) {
     .querySelector("#password-input-signup")
     .value.trim();
   // Value.trim() removes whitespace from both sides of a string. This is usefull when dealing with passwords and usernames.
-
   if (usernameEl && passwordEl) {
     const response = await fetch("/api/user", {
       method: "POST",
       body: JSON.stringify({
-        username: usernameEl.value,
-        password: passwordEl.value,
+        username: usernameEl,
+        password: passwordEl,
       }),
       headers: { "Content-Type": "application/json" },
     });

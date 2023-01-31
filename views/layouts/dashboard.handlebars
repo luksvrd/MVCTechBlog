@@ -1,42 +1,38 @@
-<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta new="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tech Blog</title>
+  <link
+    href="https://cdn.jsdelivr.net/npm/tailwindcss@1.x/dist/tailwind.min.css"
+    rel="stylesheet"
+  />
+  <link href="/dist/output.css" type="text/css" />
+</head>
 
-  <head>
-    <meta charset="utf-8" />
-    <meta new="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tech Blog</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/tailwindcss@1.x/dist/tailwind.min.css"
-      rel="stylesheet"
-    />
-    <link href="/dist/output.css" rel="stylesheet" />
-  </head>
-
-  <body
-    class="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700"
+<body
+  class="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700"
+>
+  <nav
+    class="navbar bg-white px-2 sm:px-4 py-2.5 dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600"
   >
-    <nav
-      class="navbar bg-white px-2 sm:px-4 py-2.5 dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600"
-    >
-      <ul class="flex-row">
-        <li class="li-inline nav-item"><a href="/">Home</a></li>
-        <li class="li-inline nav-item"><a href="/dashboard">Dashboard</a></li>
-        <li class="li-inline nav-item"><a href="#" id="logout-link">Logout</a>
-        </li>
-      </ul>
-    </nav>
-    <header class="hero">
-      <h1 class="app-title"><a href="/dashboard">Your Dashboard</a></h1>
-    </header>
+    <ul class="flex-row">
+      <li class="li-inline nav-item"><a href="/">Home</a></li>
+      <li class="li-inline nav-item"><a href="/dashboard">Dashboard</a></li>
+      <li class="li-inline nav-item"><a href="#" id="logout-link">Logout</a>
+      </li>
+    </ul>
+  </nav>
+  <header class="hero">
+    <h1 class="app-title"><a href="/dashboard">Your Dashboard</a></h1>
+  </header>
 
-    <main class="col-auto">
-      {{{body}}}
-    </main>
+  <main class="col-auto">
+    {{{body}}}
+  </main>
 
-    <footer class="footer flex-row justify-center">
-      <a href="/dashboard/new">New Post</a>
-    </footer>
-  </body>
+  <footer class="footer flex-row justify-center">
+    <a href="/dashboard/new">New Post</a>
+  </footer>
+</body>
 
-  <script src="../../public/js/logout.js"></script>
-
-</html>
+<script src="/js/logout.js"></script>

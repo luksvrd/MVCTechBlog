@@ -1,46 +1,52 @@
-<div class="post">
-  <article class="card">
-    <div class="card-header flex-row justify-space-between">
-      <h2>{{post.title}}</h2>
-      <div>
-        Posted by {{post.User.username}} on {{format_date post.createdAt}}
+<ol class="post relative border-l border-gray-200 dark:border-gray-700">
+  <li class="card mb-10 ml-6">
+    <div
+      class="card-header p-4 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-700 dark:border-gray-600"
+    >
+      <div class="items-center justify-between mb-3 sm:flex">
+        <div
+          class="font-semibold text-gray-900 dark:text-white hover:underline"
+        >{{post.title}}</div>
+        <div
+          class="text-sm font-normal text-gray-500 lex dark:text-gray-300"
+        >Posted by
+          {{post.User.username}}
+          on
+          {{format_date post.createdAt}}</div>
       </div>
+      <div
+        class="card-body p-3 text-xs italic font-normal text-gray-500 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-600 dark:border-gray-500 dark:text-gray-300"
+      >{{post.body}}</div>
     </div>
-    <div class="card-body">
-      {{post.body}}
-      </div>
-  </article>
+  </li>
+</ol>
 
-  {{#if post.Comments}}
-    <section class="card">
-      <div class="card-header">
-        <h3>Comments</h3>
-      </div>
-
-      <div class="card-body">
-        {{#each post.Comments}}
-          <div>
-            <p>{{body}}</p>
-            <p>&mdash; {{User.username}}, {{format_date createdAt}}</p>
-          </div>
-        {{/each}}
-      </div>
-    </section>
-  {{/if}}
-
-  <form id="new-comment-form" class="card">
-    <div class="card-header">
-      <h3>Leave a Comment</h3>
+<form id="new-comment-form" class="card">
+  <div
+    class="card-header w-full mb-4 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600"
+  >
+    <div class="card-body px-4 py-2 bg-white rounded-t-lg dark:bg-gray-800">
+      <input type="hidden" name="post-id" value="{{post.id}}" />
+      <label for="comment-body" class="sr-only">Your comment</label>
+      <textarea
+        name="comment-body"
+        rows="4"
+        class="form-input w-full px-0 text-sm text-gray-900 bg-white border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400"
+        placeholder="Write a comment..."
+        required
+      ></textarea>
     </div>
-
-      <div class="card-body">
-        <input type="hidden" name="post-id" value="{{post.id}}" />
-        <label for="comment-body">Comment</label>
-        <textarea name="comment-body" class="form-input" placeholder="Comment"></textarea>
-        <button type="submit" class="btn">Submit</button>
-      </div>
-    </form>
+    <div
+      class="flex items-center justify-between px-3 py-2 border-t dark:border-gray-600"
+    >
+      <button
+        type="submit"
+        class="btn inline-flex items-center py-2.5 px-4 text-xs font-medium text-center text-white bg-blue-700 rounded-lg focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-900 hover:bg-blue-800"
+      >
+        Post comment
+      </button>
+    </div>
   </div>
-</div>
+</form>
 
-<script src="../public/js/comment.js"></script>
+<script src="/js/comment.js"></script>

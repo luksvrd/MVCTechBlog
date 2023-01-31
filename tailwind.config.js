@@ -11,8 +11,8 @@ module.exports = {
   plugins: [],
   purge: {
     content: [
-      ".views/layout/**/*.hbs",
-      "./views/**/*.hbs",
+      ".views/layout/**/*.handlebars",
+      "./views/**/*.handlebars",
       "public/js/**/*.js",
     ],
     defaultExtractor: (content) => {
