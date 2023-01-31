@@ -1,7 +1,7 @@
 # MVC Tech Blog
 
 https://github.com/luksvrd/MVCTechBlog
-![MVC TechBlog](https://github.com/luksvrd/MVCTechBlog/blob/techblog.png)
+![MVC TechBlog](https://github.com/luksvrd/MVCTechBlog/techblog.png)
 
 ## License
 
